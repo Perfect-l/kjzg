@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/w_index.css">
+    <link rel="stylesheet" href="lib/swiper.min.css">
+    <title>Document</title>
+    <style>
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color:#000;
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<!--行业解决方案-->
+    <div class="w_solution" width="100%">
+    <img src="img/w_case.png" alt="" class="title">
+    <div class="w_solution-subtitle">
+        经过多年积累，科匠中国陆续推出的电子商务、生活服务、智慧旅游、移动金融、远程医疗、掌上地产、移动酒店、电子政务、游戏娱乐、电子杂志等移动解决方案，为各行业企业向移动互联网转型翻开了崭新一页。
+    </div>
+    <ul class="w_solution-list" id="w_solution-list">
+        <li  v-for="t in todos">
+            <div>
+                <a href="#"><img :src=t.img1 alt="" class="w_img1"></a>
+                <a href="#"><img :src=t.img alt="" class="w_img2"></a>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--案例展示-->
+    <div class="w_case w_of-h">
+        <img src="img/case-title.png" alt="" class="title">
+    <div class="w_case-subtitle">
+        我们坚信，我们的移动战略将无处不在、改变未来。
+    </div>
+    <ul class="w_nav">
+        <li class="w_current" data-json="w_data"> 电子商务</li>
+        <li data-json="w_data1">生活服务</li>
+        <li data-json="w_data2">移动医疗</li>
+        <li data-json="w_data3">智慧旅游</li>
+        <li data-json="w_data4">电子政务</li>
+        <li data-json="w_data5">移动金融</li>
+        <li>
+            <a href="#" style="padding: 10px 29px;">更多</a>
+        </li>
+    </ul>
+<div class="carousel-list" style="height:420px;overflow: hidden;">
+    <!--swiper轮播-->
+    <div class="swiper-container" id="w_swiper1">
+        <div class="swiper-wrapper">
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+    </div>
+    <script src="lib/jquery-3.2.1.min.js"></script>
+    <script src="lib/vue.js"></script>
+    <script src="lib/swiper.min.js"></script>
+    <script src="js/w_index.js"></script>
+</body>
+</html>
